@@ -17,6 +17,6 @@ export default new Router({
     {path: '/list', component: List},
     {path: '/add', component: Add},
     {path: '/collect', component: Collect},
-    {path: '/detail', component: Detail}
+    {path: '/detail/:bid', component: Detail, name: 'detail'}
   ]
 })

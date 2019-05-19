@@ -1,7 +1,8 @@
 <template>
   <div>
-    <Mheader :back="true">首页</Mheader>
+    <Mheader :back="false">首页</Mheader>
     <Swiper :swiperSlides = 'slide'></Swiper>
+    <hot-book :hotBook = 'hotBook'></hot-book>
   </div>
 </template>
 
@@ -9,17 +10,28 @@
 // 全局导入
 import Mheader from '../commen/Mheader'
 import Swiper from '../commen/Swiper'
-import {getSwiper} from '../useApi'
+import {getSwiper, getHotBook} from '../useApi'
+import HotBook from '../commen/HotBook'
+
 export default {
   name: 'Home',
-  components: {Mheader, Swiper},
-  async created () {
-    let {data} = await getSwiper()
-    this.slide = data
+  components: {HotBook, Mheader, Swiper},
+  created () {
+    this.getSwipers()
+    this.getHotBooks()
   },
   data () {
     return {
-      slide: []
+      slide: [],
+      hotBook: []
+    }
+  },
+  methods: {
+    async getSwipers () {
+      this.slide = await getSwiper()
+    },
+    async getHotBooks () {
+      this.hotBook = await getHotBook()
     }
   }
 

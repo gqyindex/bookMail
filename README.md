@@ -32,3 +32,4 @@ npm test
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 >>>>>>> base on vue
+解决fixed定位时，Tab栏遮盖到内容：给Tab栏包裹一个父级div，设置此父级div的宽高和tab相同

@@ -12,10 +12,6 @@
       <i class="iconfont icon-shoucang myfont"></i>
       <span>收藏</span>
     </router-link>
-    <router-link to="/add">
-      <i class="iconfont icon-xiaozhu myfont"></i>
-      <span>添加</span>
-    </router-link>
   </footer>
 </template>
 
@@ -36,6 +32,7 @@ export default {
     height: 60px;
     width: 100%;
     display: flex;
+    background-color: #ffffff;
     a{
       color: #515151;
       display: flex;
@@ -48,7 +45,7 @@ export default {
       }
     }
     a.router-link-active{
-      color: #64b532;
+      color: #00C896;
     }
   }
 

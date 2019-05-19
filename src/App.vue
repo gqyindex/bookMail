@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <router-view/>
+    <div id="footer">
     <Tab></Tab>
+    </div>
   </div>
 </template>
 
@@ -16,4 +18,8 @@ export default {
 
 <style>
   *{margin: 0;padding: 0}
+  #footer{
+    height: 60px;
+    width: 100%;
+  }
 </style>
