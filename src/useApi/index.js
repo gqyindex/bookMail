@@ -23,7 +23,7 @@ export let collection = () => {
   return axios.get('/collection')
 }
 
-export let addcollect = (id) => {
+export let addCollect = (id) => {
   return axios.post(`collection?id=${id}`)
 }
 
@@ -33,4 +33,8 @@ export let deleteCollect = (id) => {
 
 export let getPages = (offset) => {
   return axios.get(`/pages?offset=${offset}`)
+}
+
+export let getClass = (id) => {
+  return axios.get(`/classList?id=${id}`)
 }

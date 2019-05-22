@@ -2,10 +2,9 @@
   <section>
     <h4>为您推荐:热门分类</h4>
       <ul>
-        <router-link v-for="(item,index) in hotBook" :key="index" :to="{name:'detail',params:{bid:item.bookId}}" tag="li">
-          <img :src="item.bookImg"/>
-          <p>{{item.bookName}}</p>
-          <p>￥{{item.bookPrice}}</p>
+        <router-link v-for="(item,index) in hotBook" :key="index" :to="{name:'class',params:{bid:item.classId}}" tag="li">
+          <img :src="item.classImg"/>
+          <p>{{item.className}}</p>
         </router-link>
       </ul>
   </section>
@@ -39,12 +38,13 @@ ul{
     margin:3%;
     box-shadow: 6px 6px 8px #ccc;
     border-radius: 12px;
+    text-align: center;
     img{
       width: 100%;
     }
     p:nth-child(2){
-      color: extract(@mycolor,1);
-      font-size: 14px;
+      color: extract(@mycolor,2);
+      font-size: 16px;
     }
     p:nth-child(3){
       color: extract(@mycolor,2);

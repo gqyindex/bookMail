@@ -42,6 +42,13 @@ http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
     res.end(JSON.stringify(hotBook))
   } */
+  if (pathname === '/classList') {
+    res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
+    read('./classList.json', function (data) {
+      data = data.filter(item => item.classId === id)
+      res.end(JSON.stringify(data))
+    })
+  }
   if (pathname === '/bookList') {
     if (id) {
       read('./bookList.json', function (books) {

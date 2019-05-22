@@ -19,7 +19,7 @@
 
 <script>
 import Mheader from '../commen/Mheader'
-import {getPages, addcollect} from '../useApi'
+import {getPages, addCollect} from '../useApi'
 export default {
   name: 'List',
   components: {Mheader},
@@ -58,7 +58,7 @@ export default {
       }
     },
     async addCollects (id) {
-      await addcollect(id)
+      await addCollect(id)
     }
   }
 }

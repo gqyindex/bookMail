@@ -12,6 +12,7 @@ export default new Router({
     {path: '/list', component: () => import('../components/List.vue'), meta: {keepAlive: true}},
     {path: '/add', component: () => import('../components/Add.vue')},
     {path: '/collect', component: () => import('../components/Collect.vue')},
-    {path: '/detail/:bid', component: () => import('../components/detail.vue'), name: 'detail'}
+    {path: '/detail/:bid', component: () => import('../components/Detail.vue'), name: 'detail'},
+    {path: '/class/:bid', component: () => import('../components/ClassList.vue'), name: 'class'}
   ]
 })
