@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h4>为您推荐:热门图书</h4>
+    <h4>为您推荐:热门分类</h4>
       <ul>
         <router-link v-for="(item,index) in hotBook" :key="index" :to="{name:'detail',params:{bid:item.bookId}}" tag="li">
           <img :src="item.bookImg"/>

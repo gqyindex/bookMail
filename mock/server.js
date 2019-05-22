@@ -4,7 +4,7 @@ const fs = require('fs')
 
 /* 引入swiper.js模块 */
 const swiper = require('./swiper')
-const hotBook = require('./hotbook')
+const classify = require('./classify')
 
 /* 封装readFile和writeFile */
 function read (target, callback) {
@@ -34,27 +34,34 @@ http.createServer((req, res) => {
   if (pathname === '/swiper') {
     res.end(JSON.stringify(swiper))
   }
-  if (pathname === '/hotbook') {
+  if (pathname === '/classify') {
+    res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
+    res.end(JSON.stringify(classify))
+  }
+  /* if (pathname === '/hotbook') {
     res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
     res.end(JSON.stringify(hotBook))
-  }
+  } */
   if (pathname === '/bookList') {
-    switch (req.method) {
-      case 'GET':
-        if (id) {
-          read('./bookList.json', function (books) {
-            res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
-            books = books.find(item => item.bookId === id)
-            res.end(JSON.stringify(books))
-          })
-        } else {
-          read('./bookList.json', function (books) {
-            res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
-            res.end(JSON.stringify(books))
-          })
-        }
-        break
+    if (id) {
+      read('./bookList.json', function (books) {
+        res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
+        books = books.filter(item => item.bookId === id)
+        res.end(JSON.stringify(books))
+      })
     }
+  }
+  if (pathname === '/pages') {
+    let offset = query.offset || 0
+    let pageSize = 4
+    read('./bookList.json', function (books) {
+      let partBooks = books.slice(offset, offset + pageSize)
+      let haveMore = true
+      if (books.length <= offset + pageSize) {
+        haveMore = false
+      }
+      res.end(JSON.stringify({partBooks, haveMore}))
+    })
   }
   if (pathname === '/collection') {
     switch (req.method) {

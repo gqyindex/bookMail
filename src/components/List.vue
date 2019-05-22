@@ -1,9 +1,10 @@
 <template>
   <div>
     <Mheader :back="true">书籍列表</Mheader>
+    <div class="content"  ref="scroll"  @scroll="scrollHandler">
     <ul>
       <router-link v-for="(item,index) in bookLists" :key="index" :to="{name:'detail',params:{bid:item.bookId}}" tag="li">
-        <img :src="item.bookImg"/>
+        <img v-lazy="item.bookImg"/>
         <div>
         <p>{{item.bookName}}</p>
         <p>{{item.bookContent}}</p>
@@ -12,26 +13,49 @@
         </div>
       </router-link>
     </ul>
+    </div>
   </div>
 </template>
 
 <script>
 import Mheader from '../commen/Mheader'
-import {getBookList, addcollect} from '../useApi'
+import {getPages, addcollect} from '../useApi'
 export default {
   name: 'List',
   components: {Mheader},
-  created () {
+  mounted () {
     this.getBookLists()
+    window.addEventListener('scroll', this.scrollHandler, true)
   },
   data () {
     return {
-      bookLists: []
+      bookLists: [],
+      offset: 0,
+      haveMore: true,
+      timer: ''
     }
   },
   methods: {
+    scrollHandler () {
+      clearTimeout(this.timer)
+      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+      let scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight
+      let clientHeight = this.$refs.scroll.clientHeight
+      this.timer = setTimeout(() => {
+        if (scrollTop + clientHeight - 30 > scrollHeight) {
+          this.getBookLists()
+        }
+      }, 100)
+    },
     async getBookLists () {
-      this.bookLists = await getBookList()
+      if (this.haveMore) {
+        let {haveMore, partBooks} = await getPages(this.offset)
+        // 每一次加载的图书加上上一次的图书，全部显示出来
+        this.bookLists = [...this.bookLists, ...partBooks]
+        this.haveMore = haveMore
+        /* 偏移量等于第一次加载的图书长度跟后来加载图书长度之和 */
+        this.offset = this.bookLists.length
+      }
     },
     async addCollects (id) {
       await addcollect(id)
@@ -43,6 +67,9 @@ export default {
 <style scoped lang="less">
   @myfont:16px,14px,12px;
   @mycolor:#00C896,#FF0000;
+  .content{
+    height: 100%;
+  }
 ul{
   li{
     width: 92%;

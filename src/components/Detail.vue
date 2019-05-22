@@ -2,10 +2,10 @@
   <section>
   <mheader :back="true">图书详情</mheader>
     <section id="detail">
-      <h3>{{bookMeg.bookName}}</h3>
-      <h4>{{bookMeg.bookContent}}</h4>
-      <h4>抢购价：￥{{bookMeg.bookPrice}}</h4>
-      <img :src="bookMeg.bookImg"/>
+      <h3>{{bookMeg[0].bookName}}</h3>
+      <h4>{{bookMeg[0].bookContent}}</h4>
+      <h4>抢购价：￥{{bookMeg[0].bookPrice}}</h4>
+      <img :src="bookMeg[0].bookImg"/>
     </section>
   <footer></footer>
   </section>

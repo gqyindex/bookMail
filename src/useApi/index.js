@@ -11,12 +11,8 @@ export let getSwiper = () => {
   return axios.get('/swiper')
 }
 
-export let getHotBook = () => {
-  return axios.get('/hotbook')
-}
-
-export let getBookList = () => {
-  return axios.get('/bookList')
+export let getClassify = () => {
+  return axios.get('/classify')
 }
 
 export let detailBook = (id) => {
@@ -33,4 +29,8 @@ export let addcollect = (id) => {
 
 export let deleteCollect = (id) => {
   return axios.delete(`/collection?id=${id}`)
+}
+
+export let getPages = (offset) => {
+  return axios.get(`/pages?offset=${offset}`)
 }

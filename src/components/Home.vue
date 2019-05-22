@@ -10,7 +10,7 @@
 // 全局导入
 import Mheader from '../commen/Mheader'
 import Swiper from '../commen/Swiper'
-import {getSwiper, getHotBook} from '../useApi'
+import {getSwiper, getClassify} from '../useApi'
 import HotBook from '../commen/HotBook'
 
 export default {
@@ -31,7 +31,8 @@ export default {
       this.slide = await getSwiper()
     },
     async getHotBooks () {
-      this.hotBook = await getHotBook()
+      this.hotBook = await getClassify()
+      console.log(this.hotBook)
     }
   }
 
