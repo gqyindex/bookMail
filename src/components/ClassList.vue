@@ -38,7 +38,6 @@ export default {
   },
   methods: {
     async addCollects (id) {
-      console.log(id)
       await addCollect(id)
     }
   }

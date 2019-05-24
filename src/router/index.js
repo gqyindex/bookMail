@@ -10,7 +10,7 @@ export default new Router({
   routes: [
     {path: '/home', component: () => import('../components/Home.vue'), meta: {keepAlive: true}},
     {path: '/list', component: () => import('../components/List.vue'), meta: {keepAlive: true}},
-    {path: '/add', component: () => import('../components/Add.vue')},
+    {path: '/cart', component: () => import('../components/Cart.vue')},
     {path: '/collect', component: () => import('../components/Collect.vue')},
     {path: '/detail/:bid', component: () => import('../components/Detail.vue'), name: 'detail'},
     {path: '/class/:bid', component: () => import('../components/ClassList.vue'), name: 'class'}

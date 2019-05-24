@@ -12,6 +12,10 @@
       <i class="iconfont icon-shoucang myfont"></i>
       <span>收藏</span>
     </router-link>
+    <router-link to="/cart">
+      <i class="iconfont icon-shoucang myfont"></i>
+      <span>购物车</span>
+    </router-link>
   </footer>
 </template>
 

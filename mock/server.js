@@ -38,10 +38,6 @@ http.createServer((req, res) => {
     res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
     res.end(JSON.stringify(classify))
   }
-  /* if (pathname === '/hotbook') {
-    res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
-    res.end(JSON.stringify(hotBook))
-  } */
   if (pathname === '/classList') {
     res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
     read('./classList.json', function (data) {
@@ -99,6 +95,36 @@ http.createServer((req, res) => {
           })
         })
         break
+    }
+  }
+  if (pathname === '/cart') {
+    switch (req.method) {
+      case 'GET':
+        read('./cart.json', function (data) {
+          res.writeHead(200, {'Content-Type': 'text/html;charset=utf-8'})
+          res.end(JSON.stringify(data))
+        })
+        break
+      case 'DELETE':
+        read('./cart.json', function (data) {
+          res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
+          data = data.filter(item => item.bookId !== id)
+          write('./cart.json', data, function () {
+            res.end(JSON.stringify({}))
+          })
+        })
+        break
+      case 'POST':
+        read('./bookList.json', function (data) {
+          res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'})
+          data = data.find(item => item.bookId === id)
+          read('./cart.json', function (cart) {
+            cart.push(data)
+            write('./cart.json', cart, function () {
+              res.end('addCart success')
+            })
+          })
+        })
     }
   }
 }).listen(3000)

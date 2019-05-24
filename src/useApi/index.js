@@ -38,3 +38,15 @@ export let getPages = (offset) => {
 export let getClass = (id) => {
   return axios.get(`/classList?id=${id}`)
 }
+
+export let cart = () => {
+  return axios.get(`/cart`)
+}
+
+export let addCart = (id) => {
+  return axios.post(`/cart?id=${id}`)
+}
+
+export let deleteCart = (id) => {
+  return axios.delete(`/cart?id=${id}`)
+}

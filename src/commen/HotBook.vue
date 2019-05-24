@@ -46,10 +46,6 @@ ul{
       color: extract(@mycolor,2);
       font-size: 16px;
     }
-    p:nth-child(3){
-      color: extract(@mycolor,2);
-      font-size: 12px;
-    }
   }
 }
 </style>

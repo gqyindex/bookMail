@@ -10,16 +10,21 @@
         <p>{{item.bookContent}}</p>
         <p>￥{{item.bookPrice}}</p>
         <button @click.stop="addCollects(item.bookId)">收藏</button>
+        <button @click.stop="addCarts(item.bookId)">加购物车</button>
         </div>
       </router-link>
     </ul>
+      <section v-show="flag" class="dialog">
+        <span>收藏成功</span>
+        <button @click="hide">我知道了</button>
+      </section>
     </div>
   </div>
 </template>
 
 <script>
 import Mheader from '../commen/Mheader'
-import {getPages, addCollect} from '../useApi'
+import {getPages, addCollect, addCart} from '../useApi'
 export default {
   name: 'List',
   components: {Mheader},
@@ -30,6 +35,7 @@ export default {
   data () {
     return {
       bookLists: [],
+      flag: false,
       offset: 0,
       haveMore: true,
       timer: ''
@@ -58,7 +64,15 @@ export default {
       }
     },
     async addCollects (id) {
+      this.flag = true
       await addCollect(id)
+    },
+    async addCarts (id) {
+      await addCart(id)
+    },
+    /* 点击对话框，让dialog消失 */
+    hide () {
+      this.flag = false
     }
   }
 }
@@ -69,6 +83,17 @@ export default {
   @mycolor:#00C896,#FF0000;
   .content{
     height: 100%;
+  }
+  .dialog{
+    position: fixed;
+    top: 30%;
+    left: 20%;
+    width: 60%;
+    height: 20%;
+    background-color: extract(@mycolor,1);
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
   }
 ul{
   li{
