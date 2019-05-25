@@ -4,25 +4,32 @@
     "className":"经济政治类",
     "bookMeg": [
       {
-        "bookImg": "http://img13.360buyimg.com/n2/jfs/t2737/328/1405538066/202534/aab816bf/573d821aN9de83d79.jpg!q80.webp",
-        "bookName": "自在独行：贾平凹的独行世界",
-        "bookPrice": "34.10",
-        "bookContent": "追风的人，是幸运的人，也是民昂的人。一声在苦苦追寻，就像跨服日一样",
+        "bookImg": "https://img13.360buyimg.com/n7/jfs/t3265/139/3806152849/284010/41996554/57f9d976Nba6fa140.jpg",
+        "bookName": "数字改变世界（经典版）",
+        "bookPrice": "49.90",
+        "bookContent": "耶鲁大学经济学入门课，普通人也能读懂的经济学！学会用经济学的眼光看世界，更好地追求富足快乐的人生",
         "bookId": 1
       },
       {
-        "bookImg": "https://img12.360buyimg.com/n7/jfs/t1/29471/28/6112/179709/5c492ef0Ee1f259f9/77b0cf4064df01cb.jpg!q80.webp",
-        "bookName": "爆发式赢单：金牌销售实战手记",
-        "bookPrice": "40.90",
-        "bookContent": "追风的人，是幸运的人，也是民昂的人。一声在苦苦追寻",
+        "bookImg": "https://img12.360buyimg.com/n7/jfs/t20140/136/2267289200/148794/a3e42486/5b4c39baN78f7d0d0.jpg",
+        "bookName": "复杂世界的简单法则",
+        "bookPrice": "69.90",
+        "bookContent": "沉闷枯燥的科学竟然如此通俗易懂，上至90岁下至9岁都喜欢得不得了！千万读者惊呼：经济学竟然可以这样解释",
         "bookId": 2
       },
       {
-        "bookImg": "https://img13.360buyimg.com/n7/jfs/t1/19225/14/8917/267111/5c78c9fdEf9de5c2b/72e6c2c58a5353c7.jpg!q80.webp",
-        "bookName": "看不见的美国(译文纪实)",
-        "bookPrice": "29.9",
-        "bookContent": "追风的人，是幸运的人，也是民昂的人。一声在苦苦追寻，就像跨服日一样",
+        "bookImg": "https://img14.360buyimg.com/n7/jfs/t21967/123/2275375067/130021/a1d04a4b/5b4c7363N672194b4.jpg",
+        "bookName": "经济学的思维方法",
+        "bookPrice": "89.90",
+        "bookContent": "耶鲁大学经济学入门课，普通人也能读懂的经济学！学会用经济学的眼光看世界，更好地追求富足快乐的人生",
         "bookId": 3
+      },
+      {
+        "bookImg": "https://img13.360buyimg.com/n7/jfs/t4243/150/1373511635/220373/a445f52f/58c0f905N67233208.jpg",
+        "bookName": "小岛经济学",
+        "bookPrice": "29.70",
+        "bookContent": "沉闷枯燥的科学竟然如此通俗易懂，上至90岁下至9岁都喜欢得不得了！千万读者惊呼：经济学竟然可以这样解释！",
+        "bookId": 4
       }
     ]
   },
@@ -34,22 +41,83 @@
         "bookImg": "https://img10.360buyimg.com/n2/jfs/t1/25327/21/5301/414891/5c3c340cEdc159493/839bceee79808ccb.jpg!q80.webp",
         "bookName": "Rust编程之道",
         "bookPrice": "117.80",
-        "bookContent": "追风的人，是幸运的人，也是民昂的人。一声在苦苦追寻，就像跨服日一样",
-        "bookId": 4
+        "bookContent": "超级畅销书全新升级，第1版两年内印刷近10次，Java图书领域公认的经典著作，繁体版台湾发行",
+        "bookId": 5
       },
       {
         "bookImg": "https://img10.360buyimg.com/n7/jfs/t1/29898/23/13805/456931/5ca2c8a9Ec11849e4/0a09f5c31c511cb3.jpg!q80.webp",
         "bookName": "CSS权威指南(上下册)",
         "bookPrice": "69.60",
-        "bookContent": "追风的人，是幸运的人，也是民昂的人。一声在苦苦追寻，就像跨服日一样",
+        "bookContent": "超级畅销书全新升级，第1版两年内印刷近10次，Java图书领域公认的经典著作，繁体版台湾发行",
+        "bookId": 6
+      },
+      {
+        "bookImg": "https://img10.360buyimg.com/n1/s200x200_jfs/t1/26339/8/10661/124305/5c8af829E4470835f/99742c91174d3d7a.jpg",
+        "bookName": "java从入门到精通",
+        "bookPrice": "84.10",
+        "bookContent": "超级畅销书全新升级，第1版两年内印刷近10次，Java图书领域公认的经典著作，繁体版台湾发行",
+        "bookId": 7
+      }
+    ]
+  },
+  {
+    "classId": 3,
+    "className":"高级教程类",
+    "bookMeg": [
+      {
+        "bookImg": "https://img10.360buyimg.com/n2/jfs/t1/25327/21/5301/414891/5c3c340cEdc159493/839bceee79808ccb.jpg!q80.webp",
+        "bookName": "Rust编程之道",
+        "bookPrice": "117.80",
+        "bookContent": "超级畅销书全新升级，第1版两年内印刷近10次，Java图书领域公认的经典著作，繁体版台湾发行",
         "bookId": 5
       },
       {
-        "bookImg": "http://img13.360buyimg.com/n2/jfs/t2737/328/1405538066/202534/aab816bf/573d821aN9de83d79.jpg!q80.webp",
-        "bookName": "自在独行：贾平凹的独行世界",
-        "bookPrice": "34.10",
-        "bookContent": "追风的人，是幸运的人，也是民昂的人。一声在苦苦追寻，就像跨服日一样",
+        "bookImg": "https://img10.360buyimg.com/n7/jfs/t1/29898/23/13805/456931/5ca2c8a9Ec11849e4/0a09f5c31c511cb3.jpg!q80.webp",
+        "bookName": "CSS权威指南(上下册)",
+        "bookPrice": "69.60",
+        "bookContent": "超级畅销书全新升级，第1版两年内印刷近10次，Java图书领域公认的经典著作，繁体版台湾发行",
         "bookId": 6
+      },
+      {
+        "bookImg": "https://img10.360buyimg.com/n1/s200x200_jfs/t1/26339/8/10661/124305/5c8af829E4470835f/99742c91174d3d7a.jpg",
+        "bookName": "java从入门到精通",
+        "bookPrice": "84.10",
+        "bookContent": "超级畅销书全新升级，第1版两年内印刷近10次，Java图书领域公认的经典著作，繁体版台湾发行",
+        "bookId": 7
+      }
+    ]
+  },
+  {
+    "classId": 4,
+    "className":"经济政治类",
+    "bookMeg": [
+      {
+        "bookImg": "https://img13.360buyimg.com/n7/jfs/t3265/139/3806152849/284010/41996554/57f9d976Nba6fa140.jpg",
+        "bookName": "数字改变世界（经典版）",
+        "bookPrice": "49.90",
+        "bookContent": "耶鲁大学经济学入门课，普通人也能读懂的经济学！学会用经济学的眼光看世界，更好地追求富足快乐的人生",
+        "bookId": 1
+      },
+      {
+        "bookImg": "https://img12.360buyimg.com/n7/jfs/t20140/136/2267289200/148794/a3e42486/5b4c39baN78f7d0d0.jpg",
+        "bookName": "复杂世界的简单法则",
+        "bookPrice": "69.90",
+        "bookContent": "沉闷枯燥的科学竟然如此通俗易懂，上至90岁下至9岁都喜欢得不得了！千万读者惊呼：经济学竟然可以这样解释",
+        "bookId": 2
+      },
+      {
+        "bookImg": "https://img14.360buyimg.com/n7/jfs/t21967/123/2275375067/130021/a1d04a4b/5b4c7363N672194b4.jpg",
+        "bookName": "经济学的思维方法",
+        "bookPrice": "89.90",
+        "bookContent": "耶鲁大学经济学入门课，普通人也能读懂的经济学！学会用经济学的眼光看世界，更好地追求富足快乐的人生",
+        "bookId": 3
+      },
+      {
+        "bookImg": "https://img13.360buyimg.com/n7/jfs/t4243/150/1373511635/220373/a445f52f/58c0f905N67233208.jpg",
+        "bookName": "小岛经济学",
+        "bookPrice": "29.70",
+        "bookContent": "沉闷枯燥的科学竟然如此通俗易懂，上至90岁下至9岁都喜欢得不得了！千万读者惊呼：经济学竟然可以这样解释！",
+        "bookId": 4
       }
     ]
   }

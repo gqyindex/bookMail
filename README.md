@@ -33,6 +33,7 @@ npm test
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 >>>>>>> base on vue
 
+``` bash
 tips:
 1.`**路由元信息meta:{keepAlive:true}实现页面缓存**`
 ：对要进行缓存的页面添加路由元信息
@@ -56,3 +57,4 @@ tips:
 6.路由的懒加载：router.vuejs.org====》Lazy Loading Routes
                改变router的component: () => import(url)
                             
+```

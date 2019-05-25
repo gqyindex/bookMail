@@ -15,7 +15,7 @@
        <div class="pay">
          <p>总计金额</p>
          <p>￥{{total() | fixed(2)}}</p>
-         <button>确认支付</button>
+         <router-link :to="{name:'order',params:{bid:total()}}" tag="button">确认支付</router-link>
        </div>
        </template>
      </section>

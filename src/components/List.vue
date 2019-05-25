@@ -15,7 +15,7 @@
       </router-link>
     </ul>
       <section v-show="flag" class="dialog">
-        <span>收藏成功</span>
+        <h3>操作成功</h3>
         <button @click="hide">我知道了</button>
       </section>
     </div>
@@ -68,6 +68,7 @@ export default {
       await addCollect(id)
     },
     async addCarts (id) {
+      this.flag = true
       await addCart(id)
     },
     /* 点击对话框，让dialog消失 */
@@ -80,7 +81,7 @@ export default {
 
 <style scoped lang="less">
   @myfont:16px,14px,12px;
-  @mycolor:#00C896,#FF0000;
+  @mycolor:#00C896,#FF0000,#ffffff;
   .content{
     height: 100%;
   }
@@ -90,10 +91,21 @@ export default {
     left: 20%;
     width: 60%;
     height: 20%;
-    background-color: extract(@mycolor,1);
-    border: 1px solid red;
+    background-color: extract(@mycolor,3);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    h3{
+      margin:10% 0;
+    }
+    button{
+      background-color: extract(@mycolor,3);
+      width: 100%;
+      height: 30%;
+      margin-top: 12%;
+      border-radius: 20px;
+    }
   }
 ul{
   li{
@@ -127,7 +139,7 @@ ul{
       button{
         border: 0;
         outline: none;
-        width: 50px;
+        width: 60px;
         height: 20px;
         background-color: extract(@mycolor,2);
         border-radius: 8px;

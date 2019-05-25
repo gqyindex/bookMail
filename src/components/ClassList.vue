@@ -12,6 +12,7 @@
         </div>
       </router-link>
     </ul>
+    <footer></footer>
   </div>
 </template>
 
@@ -47,6 +48,15 @@ export default {
 <style scoped lang="less">
   @myfont:16px,14px,12px;
   @mycolor:#00C896,#FF0000;
+  footer{
+    position: fixed;
+    bottom:0 !important;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+  }
   ul{
     li{
       width: 92%;
